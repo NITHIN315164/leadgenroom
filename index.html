@@ -6,72 +6,72 @@
 <title>Lead Control</title>
 <style>
 :root{--bg:#f3f3ef;--panel:#fff;--ink:#111;--muted:#70706a;--line:#111;--accent:#dfff3f}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif}
-.app{min-height:100vh;display:grid;grid-template-columns:230px 1fr}
-aside{border-right:2px solid var(--line);padding:22px;background:#fafaf7}.brand{font-size:23px;font-weight:950;letter-spacing:-1.5px;margin-bottom:40px}.brand span{background:var(--accent);border:2px solid var(--line);padding:2px 6px}
-nav button{display:block;width:100%;text-align:left;border:0;background:transparent;padding:12px 10px;margin:3px 0;font-weight:900;cursor:pointer}nav button.active{background:#111;color:#fff}
-main{padding:28px;min-width:0}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:24px}
-h1{margin:0;font-size:38px;letter-spacing:-2px}.sub{color:var(--muted);font-weight:650;margin-top:5px}
-.actions{display:flex;gap:9px}.btn{border:2px solid #111;background:#fff;padding:10px 14px;font-weight:900;cursor:pointer;box-shadow:3px 3px 0 #111}.btn.primary{background:var(--accent)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.card{background:#fff;border:2px solid #111;padding:18px;box-shadow:4px 4px 0 #111}
-.label{font-size:11px;font-weight:950;text-transform:uppercase;letter-spacing:.08em}.num{font-size:34px;font-weight:950;margin-top:8px}.delta{font-size:12px;color:var(--muted);font-weight:700;margin-top:5px}
-.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.field{border:2px solid #111;background:#fff;padding:11px 12px;outline:none}.search{flex:1;min-width:220px}
-.table-wrap{border:2px solid #111;background:#fff;overflow:auto;box-shadow:5px 5px 0 #111}table{width:100%;border-collapse:collapse;min-width:760px}
-th,td{padding:14px 15px;border-bottom:1.5px solid #bbb;text-align:left;white-space:nowrap}th{background:#111;color:#fff;font-size:11px;text-transform:uppercase;letter-spacing:.07em}tr:last-child td{border-bottom:0}
-.name{font-weight:900}.muted{color:var(--muted)}.pill{display:inline-block;border:2px solid #111;padding:4px 8px;font-size:11px;font-weight:900;background:var(--accent)}
-.empty{padding:48px;text-align:center;font-weight:850}.empty small{display:block;color:var(--muted);margin-top:7px}.footer{margin-top:20px;font-size:12px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
-@media(max-width:850px){.app{grid-template-columns:1fr}aside{border-right:0;border-bottom:2px solid #111}nav{display:flex;gap:5px;overflow:auto}nav button{width:auto;white-space:nowrap}main{padding:18px}.stats{grid-template-columns:repeat(2,1fr)}.top{flex-direction:column}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif}.app{min-height:100vh;display:grid;grid-template-columns:230px 1fr}aside{border-right:2px solid var(--line);padding:22px;background:#fafaf7}.brand{font-size:23px;font-weight:950;letter-spacing:-1.5px;margin-bottom:40px}.brand span{background:var(--accent);border:2px solid var(--line);padding:2px 6px}nav button{display:block;width:100%;text-align:left;border:0;background:transparent;padding:12px 10px;margin:3px 0;font-weight:900;cursor:pointer}nav button.active{background:#111;color:#fff}main{padding:28px;min-width:0}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:24px}h1{margin:0;font-size:38px;letter-spacing:-2px}.sub{color:var(--muted);font-weight:650;margin-top:5px}.actions{display:flex;gap:9px}.btn{border:2px solid #111;background:#fff;padding:10px 14px;font-weight:900;cursor:pointer;box-shadow:3px 3px 0 #111}.btn.primary{background:var(--accent)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.card{background:#fff;border:2px solid #111;padding:18px;box-shadow:4px 4px 0 #111}.label{font-size:11px;font-weight:950;text-transform:uppercase;letter-spacing:.08em}.num{font-size:34px;font-weight:950;margin-top:8px}.delta{font-size:12px;color:var(--muted);font-weight:700;margin-top:5px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.field{border:2px solid #111;background:#fff;padding:11px 12px;outline:none}.search{flex:1;min-width:220px}.table-wrap{border:2px solid #111;background:#fff;overflow:auto;box-shadow:5px 5px 0 #111}table{width:100%;border-collapse:collapse;min-width:760px}th,td{padding:14px 15px;border-bottom:1.5px solid #bbb;text-align:left;white-space:nowrap}th{background:#111;color:#fff;font-size:11px;text-transform:uppercase;letter-spacing:.07em}tr:last-child td{border-bottom:0}.name{font-weight:900}.muted{color:var(--muted)}.pill{display:inline-block;border:2px solid #111;padding:4px 8px;font-size:11px;font-weight:900;background:var(--accent)}.empty{padding:48px;text-align:center;font-weight:850}.empty small{display:block;color:var(--muted);margin-top:7px}.footer{margin-top:20px;font-size:12px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}.view{display:none}.view.active{display:block}.settings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.setting{background:#fff;border:2px solid #111;padding:18px;box-shadow:4px 4px 0 #111}.setting h3{margin:0 0 8px}.status-dot{display:inline-block;width:10px;height:10px;border:2px solid #111;border-radius:50%;margin-right:7px;background:var(--accent)}.small{font-size:12px;color:var(--muted);font-weight:700}.toast{position:fixed;right:20px;bottom:20px;background:#111;color:#fff;padding:12px 16px;font-weight:800;display:none;z-index:5}.toast.show{display:block}@media(max-width:850px){.app{grid-template-columns:1fr}aside{border-right:0;border-bottom:2px solid #111}nav{display:flex;gap:5px;overflow:auto}nav button{width:auto;white-space:nowrap}main{padding:18px}.stats{grid-template-columns:repeat(2,1fr)}.top{flex-direction:column}.settings-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="app">
 <aside>
   <div class="brand"><span>LEAD</span> CONTROL</div>
-  <nav><button class="active">Overview</button><button>Leads</button><button>Settings</button></nav>
+  <nav>
+    <button class="nav-btn active" data-view="overview">Overview</button>
+    <button class="nav-btn" data-view="leads">Leads</button>
+    <button class="nav-btn" data-view="settings">Settings</button>
+  </nav>
 </aside>
 <main>
-<section class="top">
-  <div><h1>Lead Overview</h1><div class="sub">Your incoming enquiries, in one place.</div></div>
-  <div class="actions"><button class="btn" id="refresh">↻ Refresh</button><button class="btn primary" id="export">Export CSV</button></div>
-</section>
-<section class="stats">
-  <div class="card"><div class="label">Total leads</div><div class="num" id="total">—</div><div class="delta">All captured leads</div></div>
-  <div class="card"><div class="label">New</div><div class="num" id="new">—</div><div class="delta">Awaiting follow-up</div></div>
-  <div class="card"><div class="label">Today</div><div class="num" id="today">—</div><div class="delta">Captured today</div></div>
-  <div class="card"><div class="label">This month</div><div class="num" id="month">—</div><div class="delta">Current month</div></div>
-</section>
-<div class="toolbar">
-<input id="search" class="field search" placeholder="Search leads...">
-<select id="status" class="field"><option value="">All statuses</option><option>New</option><option>Contacted</option><option>Qualified</option><option>Closed</option></select>
-<select id="dateFilter" class="field"><option value="all">All dates</option><option value="today">Today</option><option value="month">This month</option></select>
+  <section id="overview" class="view active">
+    <section class="top"><div><h1>Lead Overview</h1><div class="sub">Your incoming enquiries, in one place.</div></div><div class="actions"><button class="btn" id="refresh">↻ Refresh</button><button class="btn primary" id="export">Export CSV</button></div></section>
+    <section class="stats"><div class="card"><div class="label">Total leads</div><div class="num" id="total">—</div><div class="delta">All captured leads</div></div><div class="card"><div class="label">New</div><div class="num" id="new">—</div><div class="delta">Awaiting follow-up</div></div><div class="card"><div class="label">Today</div><div class="num" id="today">—</div><div class="delta">Captured today</div></div><div class="card"><div class="label">This month</div><div class="num" id="month">—</div><div class="delta">Current month</div></div></section>
+    <div class="toolbar"><input id="search" class="field search" placeholder="Search leads..."><select id="status" class="field"><option value="">All statuses</option><option>New</option><option>Contacted</option><option>Qualified</option><option>Closed</option></select><select id="dateFilter" class="field"><option value="all">All dates</option><option value="today">Today</option><option value="month">This month</option><option value="custom">Specific day</option></select><input id="specificDate" type="date" class="field" style="display:none"></div>
+    <div class="table-wrap"><table><thead><tr><th>Lead</th><th>Email</th><th>Phone</th><th>Area</th><th>Budget</th><th>Status</th><th>Date</th></tr></thead><tbody id="rows"></tbody></table></div>
+    <div class="footer"><span id="updated">Loading…</span><span>Lead Control</span></div>
+  </section>
+
+  <section id="leads" class="view">
+    <section class="top"><div><h1>All Leads</h1><div class="sub">Browse, search and filter every captured lead.</div></div><div class="actions"><button class="btn" id="refresh2">↻ Refresh</button><button class="btn primary" id="export2">Export CSV</button></div></section>
+    <div class="toolbar"><input id="search2" class="field search" placeholder="Search leads..."><select id="status2" class="field"><option value="">All statuses</option><option>New</option><option>Contacted</option><option>Qualified</option><option>Closed</option></select><select id="dateFilter2" class="field"><option value="all">All dates</option><option value="today">Today</option><option value="month">This month</option><option value="custom">Specific day</option></select><input id="specificDate2" type="date" class="field" style="display:none"></div>
+    <div class="table-wrap"><table><thead><tr><th>Lead</th><th>Email</th><th>Phone</th><th>Area</th><th>Budget</th><th>Status</th><th>Date</th></tr></thead><tbody id="rows2"></tbody></table></div>
+  </section>
+
+  <section id="settings" class="view">
+    <section class="top"><div><h1>Settings</h1><div class="sub">Dashboard status and connection information.</div></div></section>
+    <div class="settings-grid">
+      <div class="setting"><h3><span class="status-dot"></span>Dashboard online</h3><div class="small">Frontend is running on Vercel.</div></div>
+      <div class="setting"><h3 id="connectionTitle">Checking connection…</h3><div class="small" id="connectionText">Testing /api/leads.</div></div>
+      <div class="setting"><h3>Data source</h3><div class="small">Notion database through your secure Vercel API. The Notion token is never exposed to the browser.</div></div>
+      <div class="setting"><h3>Auto refresh</h3><div class="small">The dashboard checks for new leads every 60 seconds. Use Refresh for an immediate update.</div></div>
+    </div>
+  </section>
+</main>
 </div>
-<div class="table-wrap"><table><thead><tr><th>Lead</th><th>Email</th><th>Phone</th><th>Area</th><th>Budget</th><th>Status</th><th>Date</th></tr></thead><tbody id="rows"></tbody></table></div>
-<div class="footer"><span id="updated">Last updated —</span><span>Lead Control</span></div>
-</main></div>
+<div id="toast" class="toast"></div>
 <script>
 let leads=[];
-const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;", "'":"&#39;"}[c]));
 const dObj=v=>{const d=new Date(v);return Number.isNaN(d.getTime())?null:d};
-function norm(r){return{name:r.name??r.Name??"",email:r.email??r.Email??"",phone:r.phone??r.Phone??"",area:r.area??r.Area??r["Property Interest"]??"",budget:r.budget??r.Budget??"",status:r.status??r.Status??"New",date:r.date??r.Date??r.createdAt??""}}
-function render(){
- const q=document.getElementById("search").value.toLowerCase().trim(),st=document.getElementById("status").value,df=document.getElementById("dateFilter").value,now=new Date();
- const ok=l=>{const h=[l.name,l.email,l.phone,l.area,l.budget,l.status].join(" ").toLowerCase();if(q&&!h.includes(q))return false;if(st&&l.status!==st)return false;const d=dObj(l.date);if(df==="today"&&(!d||d.toDateString()!==now.toDateString()))return false;if(df==="month"&&(!d||d.getMonth()!=now.getMonth()||d.getFullYear()!=now.getFullYear()))return false;return true};
- document.getElementById("total").textContent=leads.length;
- document.getElementById("new").textContent=leads.filter(l=>String(l.status).toLowerCase()==="new").length;
- document.getElementById("today").textContent=leads.filter(l=>{const d=dObj(l.date);return d&&d.toDateString()===now.toDateString()}).length;
- document.getElementById("month").textContent=leads.filter(l=>{const d=dObj(l.date);return d&&d.getMonth()===now.getMonth()&&d.getFullYear()===now.getFullYear()}).length;
- const f=leads.filter(ok),rows=document.getElementById("rows");
- rows.innerHTML=f.length?f.map(l=>`<tr><td class="name">${esc(l.name||"Unnamed lead")}</td><td>${esc(l.email)}</td><td>${esc(l.phone)}</td><td>${esc(l.area)}</td><td>${esc(l.budget)}</td><td><span class="pill">${esc(l.status||"New")}</span></td><td class="muted">${esc(formatDate(l.date))}</td></tr>`).join(""):`<tr><td colspan="7" class="empty">No leads found.<small>New enquiries will appear here automatically.</small></td></tr>`;
+function plain(prop){if(!prop)return "";if(prop.title?.[0]?.plain_text!=null)return prop.title[0].plain_text;if(prop.rich_text?.[0]?.plain_text!=null)return prop.rich_text[0].plain_text;if(prop.email!=null)return prop.email;if(prop.phone_number!=null)return prop.phone_number;if(prop.select?.name!=null)return prop.select.name;if(prop.status?.name!=null)return prop.status.name;if(prop.date?.start!=null)return prop.date.start;if(prop.number!=null)return prop.number;return ""}
+function findProp(props,names){const key=Object.keys(props||{}).find(k=>names.some(n=>k.toLowerCase().trim()===n.toLowerCase().trim()));return key?plain(props[key]):""}
+function norm(r){
+  if(r?.properties){const p=r.properties;return {name:findProp(p,["Name","Full Name","Lead Name"]),email:findProp(p,["Email","E-mail"]),phone:findProp(p,["Phone","Phone Number","Mobile"]),area:findProp(p,["Area","Property Interest","Property","Location"]),budget:findProp(p,["Budget","Price"]),status:findProp(p,["Status"])||"New",date:findProp(p,["Date","Date Captured","Date captured","Created"] )||r.created_time||""};}
+  return{name:r?.name??r?.Name??"",email:r?.email??r?.Email??"",phone:r?.phone??r?.Phone??"",area:r?.area??r?.Area??r?.["Property Interest"]??"",budget:r?.budget??r?.Budget??"",status:r?.status??r?.Status??"New",date:r?.date??r?.Date??r?.createdAt??r?.created_time??""};
 }
 function formatDate(v){const d=dObj(v);return d?d.toLocaleDateString(undefined,{year:"numeric",month:"short",day:"numeric"}):"—"}
-async function load(){
- const rows=document.getElementById("rows");rows.innerHTML=`<tr><td colspan="7" class="empty">Loading leads...<small>Fetching the latest records.</small></td></tr>`;
- try{const r=await fetch("/api/leads",{cache:"no-store"});if(!r.ok)throw Error();const data=await r.json();leads=Array.isArray(data)?data.map(norm):(data.leads||[]).map(norm);document.getElementById("updated").textContent="Last updated "+new Date().toLocaleTimeString();render()}
- catch(e){leads=[];document.getElementById("updated").textContent="Waiting for database connection";render()}
-}
-document.getElementById("refresh").onclick=load;
-["search","status","dateFilter"].forEach(id=>document.getElementById(id).addEventListener("input",render));
-document.getElementById("export").onclick=()=>{const h=["Name","Email","Phone","Area","Budget","Status","Date"],csv=[h.join(",")].concat(leads.map(l=>[l.name,l.email,l.phone,l.area,l.budget,l.status,l.date].map(x=>`"${String(x??"").replace(/"/g,'""')}"`).join(","))).join("\n"),a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));a.download="leads.csv";a.click()};
+function filtered(q,st,df,dateValue){const now=new Date();return leads.filter(l=>{const h=[l.name,l.email,l.phone,l.area,l.budget,l.status].join(" ").toLowerCase();if(q&&!h.includes(q.toLowerCase().trim()))return false;if(st&&String(l.status)!==st)return false;const d=dObj(l.date);if(df==="today"&&(!d||d.toDateString()!==now.toDateString()))return false;if(df==="month"&&(!d||d.getMonth()!==now.getMonth()||d.getFullYear()!==now.getFullYear()))return false;if(df==="custom"&&(!d||d.toISOString().slice(0,10)!==dateValue))return false;return true})}
+function tableHtml(arr){return arr.length?arr.map(l=>`<tr><td class="name">${esc(l.name||"Unnamed lead")}</td><td>${esc(l.email)}</td><td>${esc(l.phone)}</td><td>${esc(l.area)}</td><td>${esc(l.budget)}</td><td><span class="pill">${esc(l.status||"New")}</span></td><td class="muted">${esc(formatDate(l.date))}</td></tr>`).join(""): `<tr><td colspan="7" class="empty">No leads found.<small>New enquiries will appear here automatically.</small></td></tr>`}
+function renderDashboard(){const q=document.getElementById("search").value,st=document.getElementById("status").value,df=document.getElementById("dateFilter").value,dv=document.getElementById("specificDate").value,now=new Date();document.getElementById("total").textContent=leads.length;document.getElementById("new").textContent=leads.filter(l=>String(l.status).toLowerCase()==="new").length;document.getElementById("today").textContent=leads.filter(l=>{const d=dObj(l.date);return d&&d.toDateString()===now.toDateString()}).length;document.getElementById("month").textContent=leads.filter(l=>{const d=dObj(l.date);return d&&d.getMonth()===now.getMonth()&&d.getFullYear()===now.getFullYear()}).length;document.getElementById("rows").innerHTML=tableHtml(filtered(q,st,df,dv));}
+function renderLeads(){const q=document.getElementById("search2").value,st=document.getElementById("status2").value,df=document.getElementById("dateFilter2").value,dv=document.getElementById("specificDate2").value;document.getElementById("rows2").innerHTML=tableHtml(filtered(q,st,df,dv));}
+function render(){renderDashboard();renderLeads()}
+function showToast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2200)}
+async function load(){document.getElementById("rows").innerHTML=`<tr><td colspan="7" class="empty">Loading leads...<small>Fetching the latest records.</small></td></tr>`;try{const r=await fetch("/api/leads",{cache:"no-store"});const data=await r.json();if(!r.ok)throw new Error(data.message||data.error||`API error ${r.status}`);const raw=Array.isArray(data)?data:(data.leads||data.results||[]);leads=raw.map(norm);document.getElementById("updated").textContent="Last updated "+new Date().toLocaleTimeString();document.getElementById("connectionTitle").innerHTML='<span class="status-dot"></span>Notion connected';document.getElementById("connectionText").textContent=`${leads.length} lead${leads.length===1?"":"s"} loaded from the API.`;render()}catch(e){leads=[];document.getElementById("updated").textContent="Connection error";document.getElementById("connectionTitle").textContent="Connection error";document.getElementById("connectionText").textContent=e.message;render()}}
+function setCustomVisibility(prefix){const f=document.getElementById(prefix+"dateFilter"),d=document.getElementById(prefix+"specificDate");d.style.display=f.value==="custom"?"block":"none"}
+function downloadCSV(){const h=["Name","Email","Phone","Area","Budget","Status","Date"],csv=[h.join(",")].concat(leads.map(l=>[l.name,l.email,l.phone,l.area,l.budget,l.status,l.date].map(x=>`"${String(x??"").replace(/"/g,'""')}"`).join(","))).join("\n"),a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));a.download="leads.csv";a.click();URL.revokeObjectURL(a.href)}
+
+document.querySelectorAll(".nav-btn").forEach(btn=>btn.onclick=()=>{document.querySelectorAll(".nav-btn").forEach(b=>b.classList.remove("active"));btn.classList.add("active");document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));document.getElementById(btn.dataset.view).classList.add("active");if(btn.dataset.view==="settings")load()});
+document.getElementById("refresh").onclick=()=>{load();showToast("Refreshing leads…")};document.getElementById("refresh2").onclick=()=>{load();showToast("Refreshing leads…")};document.getElementById("export").onclick=downloadCSV;document.getElementById("export2").onclick=downloadCSV;
+["search","status","dateFilter","specificDate"].forEach(id=>document.getElementById(id).addEventListener("input",()=>{if(id==="dateFilter")setCustomVisibility("");renderDashboard()}));
+["search2","status2","dateFilter2","specificDate2"].forEach(id=>document.getElementById(id).addEventListener("input",()=>{if(id==="dateFilter2")setCustomVisibility("2");renderLeads()}));
 load();setInterval(load,60000);
 </script>
-</body></html>
+</body>
+</html>
