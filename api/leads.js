@@ -1,11 +1,22 @@
 export default async function handler(req, res) {
   const token = process.env.NOTION_TOKEN;
-  const databaseId = process.env.NOTION_DATABASE_ID;
+  let databaseId = process.env.NOTION_DATABASE_ID;
 
   if (!token || !databaseId) {
     return res.status(500).json({
-      error: "Missing environment variables"
+      error: "Missing NOTION_TOKEN or NOTION_DATABASE_ID"
     });
+  }
+
+  // Clean the database ID if a full Notion URL was accidentally pasted
+  databaseId = databaseId.trim().replace(/^["']|["']$/g, "");
+
+  const match = databaseId.match(
+    /[0-9a-fA-F]{32}|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/
+  );
+
+  if (match) {
+    databaseId = match[0];
   }
 
   try {
